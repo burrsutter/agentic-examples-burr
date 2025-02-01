@@ -27,5 +27,11 @@ python leopard-pont-des-arts.py
 ## vLLM via MaaS
 
 ```
-export OPENAI_API_BASE=https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1
+# pip install llama-index-llms-openai-like
+pip install llama-index-llms-vllm
+pip install vllm
+```
+
+```
+python leopard-pont-des-arts-vllm.py
 ```

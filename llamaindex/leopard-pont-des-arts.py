@@ -16,18 +16,10 @@ import os
 load_dotenv()
 
 # Initialize LLM for OpenAI's gpt-4o
-# llm = OpenAI(
-#     model="gpt-4o",
-#     api_key=os.getenv('API_KEY'),
-# )
-
-# for MaaS granite, 
 llm = OpenAI(
-    model="granite-3-8b-instruct",
+    model="gpt-4o",
     api_key=os.getenv('API_KEY'),
 )
-
-
 
 # Helper to update context state
 async def update_state(ctx: Context, updates: dict) -> None:

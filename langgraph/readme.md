@@ -8,3 +8,9 @@ source venv/bin/activate
 pip install -q langchain-openai termcolor langchain_community duckduckgo_search==7.1.0 wikipedia openapi-python-client==0.12.3 langgraph langchain_experimental
 ```
 
+```
+export INFERENCE_SERVER_URL=
+export API_KEY=
+MODEL_NAME=
+```
+
