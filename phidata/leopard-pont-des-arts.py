@@ -16,36 +16,22 @@ import os
 # )
 
 # MaaS https://maas.apps.prod.rhoai.rh-aiservices-bu.com/
-# agent = Agent (
-#     model=OpenAIChat(id="granite-3-8b-instruct", 
-#                      base_url="https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1",
-#                      api_key=os.getenv("MAAS_API_KEY")),
-#     tools=[DuckDuckGo()],
-#     show_tool_calls=True,
-#     markdown=True,
-#     debug_mode=True,
-# )
+MODEL_NAME = "granite-3-8b-instruct"
+INFERENCE_SERVER_URL = "https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1"
+API_KEY = os.getenv("MAAS_API_KEY")
+
 
 # OpenAI https://platform.openai.com/api-keys
-# agent = Agent (
-#     model=OpenAIChat(id="gpt-4o", 
-#                      base_url="https://api.openai.com/v1",
-#                      api_key=os.getenv("OPENAI_API_KEY")),
-#     tools=[DuckDuckGo()],
-#     show_tool_calls=True,
-#     markdown=True,
-#     debug_mode=True,
-# )
+# MODEL_NAME = "gpt-4o"
+# INFERENCE_SERVER_URL = "https://api.openai.com/v1"
+# API_KEY = os.getenv("OPENAI_API_KEY")
+
 
 # ilab serve in a remote server Qwen2.5-Coder-32B-Instruct
-MODEL_NAME = "/var/home/instruct/.cache/instructlab/models/Qwen/Qwen2.5-Coder-32B-Instruct"
-INFERENCE_SERVER_URL = "http://localhost:8000/v1"
-API_KEY = "none"
-# OR 
-# ilab serve in a remote server Mistral-Small-24B-Instruct-2501
-# MODEL_NAME = "openai//var/home/instruct/.cache/instructlab/models/mistralai/Mistral-Small-24B-Instruct-2501"
+# MODEL_NAME = "/var/home/instruct/.cache/instructlab/models/Qwen/Qwen2.5-Coder-32B-Instruct"
 # INFERENCE_SERVER_URL = "http://localhost:8000/v1"
 # API_KEY = "none"
+
 
 agent = Agent (
     model=OpenAIChat(id=MODEL_NAME, 

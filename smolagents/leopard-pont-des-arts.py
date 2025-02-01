@@ -3,9 +3,9 @@ from smolagents import LiteLLMModel, HfApiModel
 import os
 
 # Environment Variables for OpenAI
-# MODEL_NAME = "gpt-4o"
-# INFERENCE_SERVER_URL = "https://api.openai.com/v1"
-# API_KEY = os.getenv("OPENAI_API_KEY")
+MODEL_NAME = "gpt-4o"
+INFERENCE_SERVER_URL = "https://api.openai.com/v1"
+API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Environment Variables for MaaS https://maas.apps.prod.rhoai.rh-aiservices-bu.com/
 # MODEL_NAME = "openai/granite-3-8b-instruct"
@@ -21,9 +21,9 @@ import os
 
 
 # Environment Variables for ilab serve in a remote server
-MODEL_NAME = "openai//var/home/instruct/.cache/instructlab/models/Qwen/Qwen2.5-Coder-32B-Instruct"
-INFERENCE_SERVER_URL = "http://localhost:8000/v1"
-API_KEY = "none"
+# MODEL_NAME = "openai//var/home/instruct/.cache/instructlab/models/Qwen/Qwen2.5-Coder-32B-Instruct"
+# INFERENCE_SERVER_URL = "http://localhost:8000/v1"
+# API_KEY = "none"
 # or
 # MODEL_NAME = "openai//var/home/instruct/.cache/instructlab/models/mistralai/Mistral-Small-24B-Instruct-2501"
 # INFERENCE_SERVER_URL = "http://localhost:8000/v1"
