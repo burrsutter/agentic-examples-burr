@@ -8,9 +8,22 @@ source venv/bin/activate
 pip install -q langchain-openai termcolor langchain_community duckduckgo_search==7.1.0 wikipedia openapi-python-client==0.12.3 langgraph langchain_experimental
 ```
 
+OpenAI.com
+
 ```
-export INFERENCE_SERVER_URL=
-export API_KEY=
-MODEL_NAME=
+export INFERENCE_SERVER_URL=https://api.openai.com/v1
+export API_KEY=sk-proj-blah-blah
+export MODEL_NAME="gpt-4o"
 ```
 
+Or MaaS
+
+```
+export INFERENCE_SERVER_URL=https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1
+export API_KEY=8a520f597e567c449961b36a7b0118f3
+export MODEL_NAME="granite-3-8b-instruct"
+```
+
+```
+python leopard-pont-des-arts.py
+```

@@ -11,14 +11,14 @@ from langgraph.prebuilt import ToolNode, tools_condition
 from langgraph.checkpoint.memory import MemorySaver
 
 # Environment Variables
-INFERENCE_SERVER_URL = os.getenv("API_URL_GRANITE")
-API_KEY = os.getenv("API_KEY_GRANITE")
-MODEL_NAME = "granite-3-8b-instruct"
+INFERENCE_SERVER_URL = os.getenv("INFERENCE_SERVER_URL")
+API_KEY = os.getenv("API_KEY")
+MODEL_NAME = os.getenv("MODEL_NAME")
 
 # Initialize LLM
 llm = ChatOpenAI(
     openai_api_key=API_KEY,
-    openai_api_base=f"{INFERENCE_SERVER_URL}/v1",
+    openai_api_base=f"{INFERENCE_SERVER_URL}",
     model_name=MODEL_NAME,
     top_p=0.92,
     temperature=0.01,
