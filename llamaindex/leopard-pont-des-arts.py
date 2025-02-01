@@ -15,11 +15,18 @@ import os
 
 load_dotenv()
 
-# Initialize LLM
+# Initialize LLM for OpenAI's gpt-4o
+# llm = OpenAI(
+#     model="gpt-4o",
+#     api_key=os.getenv('API_KEY'),
+# )
+
+# for MaaS granite, 
 llm = OpenAI(
-    model="gpt-4o",
+    model="granite-3-8b-instruct",
     api_key=os.getenv('API_KEY'),
 )
+
 
 
 # Helper to update context state
