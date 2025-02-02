@@ -20,8 +20,14 @@ Or MaaS
 
 ```
 export INFERENCE_SERVER_URL=https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1
-export API_KEY=8a520f597e567c449961b36a7b0118f3
+export API_KEY=
 export MODEL_NAME="granite-3-8b-instruct"
+```
+
+Or 4GPU Server with Qwen2.5-Coder-32B-Instruct
+
+```
+export INFERENCE_SERVER_URL=
 ```
 
 ```
