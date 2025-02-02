@@ -12,23 +12,34 @@ OpenAI.com
 
 ```
 export INFERENCE_SERVER_URL=https://api.openai.com/v1
-export API_KEY=sk-proj-blah-blah
+export API_KEY=sk-proj-blah
 export MODEL_NAME="gpt-4o"
 ```
 
-Or MaaS
+4GPU Server with Qwen2.5-Coder-32B-Instruct
+
+```
+export INFERENCE_SERVER_URL=http://localhost:8000/v1
+export API_KEY=nothing
+export MODEL_NAME="/var/home/instruct/.cache/instructlab/models/Qwen/Qwen2.5-Coder-32B-Instruct"
+```
+
+MaaS
+
+```
+export INFERENCE_SERVER_URL=https://deepseek-r1-distill-qwen-14b-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1
+export API_KEY=blah
+export MODEL_NAME="deepseek-r1-distill-qwen-14b"
+```
 
 ```
 export INFERENCE_SERVER_URL=https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1
-export API_KEY=
+export API_KEY=blah
 export MODEL_NAME="granite-3-8b-instruct"
 ```
 
-Or 4GPU Server with Qwen2.5-Coder-32B-Instruct
 
-```
-export INFERENCE_SERVER_URL=
-```
+
 
 ```
 python leopard-pont-des-arts.py

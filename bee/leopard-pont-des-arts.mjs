@@ -38,8 +38,8 @@ const llm = new OpenAIChatLLM({
   apiKey: process.env.API_KEY,
   modelId: "gpt-4o",  
   parameters: {
-    max_tokens: 10,
-    temperature: 0    
+    max_tokens: 500,
+    temperature: 0.1    
   },
 });
 

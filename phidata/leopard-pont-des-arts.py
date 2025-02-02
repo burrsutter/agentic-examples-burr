@@ -15,19 +15,23 @@ import os
 #     debug_mode=True,
 # )
 
-# MaaS https://maas.apps.prod.rhoai.rh-aiservices-bu.com/
-MODEL_NAME = "granite-3-8b-instruct"
-INFERENCE_SERVER_URL = "https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1"
-API_KEY = os.getenv("MAAS_API_KEY")
-
-
 # OpenAI https://platform.openai.com/api-keys
 # MODEL_NAME = "gpt-4o"
 # INFERENCE_SERVER_URL = "https://api.openai.com/v1"
 # API_KEY = os.getenv("OPENAI_API_KEY")
 
 
-# ilab serve in a remote server Qwen2.5-Coder-32B-Instruct
+# MaaS https://maas.apps.prod.rhoai.rh-aiservices-bu.com/
+
+# MODEL_NAME = "deepseek-r1-distill-qwen-14b"
+# INFERENCE_SERVER_URL = os.getenv("MAAS_URL")
+# API_KEY = os.getenv("MAAS_API_KEY")
+
+MODEL_NAME = "granite-3-8b-instruct"
+INFERENCE_SERVER_URL = "https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1"
+API_KEY = os.getenv("MAAS_API_KEY")
+
+# vllm on a remote server Qwen2.5-Coder-32B-Instruct
 # MODEL_NAME = "/var/home/instruct/.cache/instructlab/models/Qwen/Qwen2.5-Coder-32B-Instruct"
 # INFERENCE_SERVER_URL = "http://localhost:8000/v1"
 # API_KEY = "none"

@@ -30,3 +30,7 @@ npm install
 ```
 export OPENAI_API_KEY=sk-proj-blah-blah
 ```
+
+```
+node leopard-pont-des-arts.mjs
+```

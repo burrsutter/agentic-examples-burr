@@ -3,15 +3,20 @@ from smolagents import LiteLLMModel, HfApiModel
 import os
 
 # Environment Variables for OpenAI
-MODEL_NAME = "gpt-4o"
-INFERENCE_SERVER_URL = "https://api.openai.com/v1"
-API_KEY = os.getenv("OPENAI_API_KEY")
+# MODEL_NAME = "gpt-4o"
+# INFERENCE_SERVER_URL = "https://api.openai.com/v1"
+# API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Environment Variables for MaaS https://maas.apps.prod.rhoai.rh-aiservices-bu.com/
 # MODEL_NAME = "openai/granite-3-8b-instruct"
 # INFERENCE_SERVER_URL = os.getenv("MAAS_URL")
 # API_KEY = os.getenv("MAAS_API_KEY")
 # MAX_TOKENS = 2048
+
+MODEL_NAME = "openai/deepseek-r1-distill-qwen-14b"
+INFERENCE_SERVER_URL = os.getenv("MAAS_URL")
+API_KEY = os.getenv("MAAS_API_KEY")
+MAX_TOKENS = 2048
 
 # Environment Variables for Ollama
 # ollama serve and ollama pull qwen2.5-coder:32b
