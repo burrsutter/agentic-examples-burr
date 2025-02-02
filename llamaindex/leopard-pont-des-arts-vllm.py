@@ -1,6 +1,6 @@
 import asyncio
 # from llama_index.llms.openai import OpenAI
-from llama_index.llms.vllm import Vllm
+from llama_index.llms.openai_like import OpenAILike
 from llama_index.core.workflow import Context
 from llama_index.core.agent.workflow import (
     FunctionAgent,
@@ -23,10 +23,13 @@ load_dotenv()
 # )
 
 # for MaaS granite, 
-llm = Vllm(    
-    api_url="https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1",
+llm = OpenAILike(    
+    api_base="https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1",
     api_key=os.getenv('API_KEY'),
-    model="granite-3-8b-instruct"    
+    model="granite-3-8b-instruct",
+    additional_kwargs={"stop": ["."]},
+    is_chat_model=True,
+    is_function_calling_model=True    
 )
 
 

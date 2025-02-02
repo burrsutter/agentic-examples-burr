@@ -27,9 +27,9 @@ python leopard-pont-des-arts.py
 ## vLLM via MaaS
 
 ```
-# pip install llama-index-llms-openai-like
-pip install llama-index-llms-vllm
-pip install vllm
+pip install llama-index-llms-openai-like
+# pip install llama-index-llms-vllm
+# pip install vllm
 ```
 
 ```
