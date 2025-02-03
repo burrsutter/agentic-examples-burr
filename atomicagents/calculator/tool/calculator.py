@@ -12,11 +12,11 @@ class CalculatorToolInputSchema(BaseIOSchema):
     """
     Tool for performing calculations. Supports basic arithmetic operations
     like addition, subtraction, multiplication, and division, as well as more
-    complex operations like exponentiation and trigonometric functions.
+    complex operations like math fractions.
     Use this tool to evaluate mathematical expressions.
     """
 
-    expression: str = Field(..., description="Mathematical expression to evaluate. For example, '2 + 2'.")
+    expression: str = Field(..., description="Strictly valid mathematical expression. Must be a valid arithmetic or symbolic expression, e.g., '2 + 2' or 'sin(pi/2)'. Avoid natural language or descriptive text such as units like 'meters', 'km/h', or 'seconds'; instead, convert them to numeric values before evaluation. Ensure logically correct operator precedence.")
 
 
 #################
