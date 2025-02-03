@@ -27,10 +27,21 @@ load_dotenv()
 #     is_function_calling_model=True    
 # )
 
+# MaaS Deepseek
+# llm = OpenAILike(    
+#     api_base="https://deepseek-r1-distill-qwen-14b-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1",
+#     api_key=os.getenv('API_KEY'),
+#     model="deepseek-r1-distill-qwen-14b",
+#     additional_kwargs={"stop": ["."]},
+#     is_chat_model=True,
+#     is_function_calling_model=True    
+# )
+
+
 # vLLM server
 llm = OpenAILike(    
     api_base="http://localhost:8000/v1",
-    api_key=os.getenv('API_KEY'), 
+#    api_key=os.getenv('API_KEY'), 
     model="/var/home/instruct/.cache/instructlab/models/Qwen/Qwen2.5-Coder-32B-Instruct",
     additional_kwargs={"stop": ["."]},
     is_chat_model=True,

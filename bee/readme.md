@@ -41,7 +41,7 @@ node leopard-pont-des-arts.mjs
 
 ```
 export INFERENCE_SERVER_URL=https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1
-export API_KEY=blah
+export API_KEY=169fc1c29353f7c41779f00834287eda
 # export MODEL_NAME=granite-3-8b-instruct
 ```
 Note: works better if the model name is NOT defined
