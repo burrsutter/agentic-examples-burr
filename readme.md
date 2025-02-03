@@ -16,7 +16,7 @@ note: the answer should be about 9.6 seconds and it seems not every execution su
 | gpt4o at openai.com          | 9.62       | 9.62    | 9.62      | 9.6        | 9.6   |        |         |         |
 | qwen2.5-coder:32b            | 9.62       | fail    | fail      |            |       |        |         |         |
 | deepseek-r1-distill-qwen-14b | fail       | 4.04    | ?         |            |       |        |         |         |
-| granite-3-8b-instruct        | fail       | fail    | 9.6       |            |       |        |         | 9.3/4.5 |
+| granite-3-8b-instruct        | fail       | fail    | 9.6       |            |       |        |         | 9.96    |
 
 
 ### MaaS 
