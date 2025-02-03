@@ -14,12 +14,18 @@ note: the answer should be about 9.6 seconds and it seems not every execution su
 | Model+Server                 | smolagents | phidata | langgraph | llamaindex | bee   | crewai | autogen | atomic  |
 | ---------------------------- | ---------- | ------- | --------- | ---------- | ----- | ------ | ------- | ------- |
 | gpt4o at openai.com          | 9.62       | 9.62    | 9.62      | 9.6        | 9.6   |        |         |         |
-| qwen2.5-coder:32b            | 9.62       | fail    | fail      |            |       |        |         |         |
-| deepseek-r1-distill-qwen-14b | fail       | 4.04    | ?         |            |       |        |         |         |
-| granite-3-8b-instruct        | fail       | fail    | 9.6       |            |       |        |         | 9.96    |
+| qwen2.5-coder:32b            | 9.62       | fail    | fail      |            | 9.62  |        |         |         |
+| deepseek-r1-distill-qwen-14b | fail       | 4.04    | ?         |            | 9.62  |        |         |         |
+| granite-3-8b-instruct        | fail       | fail    | 9.6       |            | 9.62  |        |         | 9.96    |
 
 
 ### MaaS 
 
 https://maas.apps.prod.rhoai.rh-aiservices-bu.com/
+
+```
+curl $INFERENCE_SERVER_URL/models \
+  -H "Authorization: Bearer $API_KEY" \
+  -H "Content-Type: application/json"
+```
 

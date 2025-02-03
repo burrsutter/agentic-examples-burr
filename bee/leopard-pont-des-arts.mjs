@@ -1,5 +1,5 @@
 import { BeeAgent } from 'bee-agent-framework/agents/bee/agent';
-import { OllamaChatLLM } from 'bee-agent-framework/adapters/ollama/chat';
+// import { OllamaChatLLM } from 'bee-agent-framework/adapters/ollama/chat';
 import { OpenAIChatLLM } from 'bee-agent-framework/adapters/openai/chat';
 import { TokenMemory } from 'bee-agent-framework/memory/tokenMemory';
 import { Ollama } from 'ollama';
@@ -16,11 +16,12 @@ const noTimeoutFetch = (input, init) => {
   });
 };
 
-const OLLAMA_SERVER = 'http://10.1.2.38:11434';
-const MODEL = 'granite3.1-dense';
 
 /////////////////////////////////////
 // Ollama
+// const OLLAMA_SERVER = 'http://10.1.2.38:11434';
+// const MODEL = 'granite3.1-dense';
+
 // const llm = new OllamaChatLLM({
 //   modelId: MODEL,
 //   parameters: {
@@ -32,11 +33,15 @@ const MODEL = 'granite3.1-dense';
 //   }),
 // });
 
+console.log("Using the following model server: ")
+console.log(process.env.INFERENCE_SERVER_URL)
+console.log(process.env.API_KEY)
+console.log(process.env.MODEL_NAME)
 
 const llm = new OpenAIChatLLM({
-  baseURL: 'https://api.openai.com/v1',
+  baseURL: process.env.INFERENCE_SERVER_URL,
   apiKey: process.env.API_KEY,
-  modelId: "gpt-4o",  
+  modelId: process.env.MODEL_NAME,  
   parameters: {
     max_tokens: 500,
     temperature: 0.1    

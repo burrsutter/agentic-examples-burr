@@ -28,7 +28,7 @@ llm = ChatOpenAI(
 )
 
 # Initialize Tools
-tools = [DuckDuckGoSearchRun()]
+tools = [DuckDuckGoSearchRun(verbose=True)]
 llm_with_tools = llm.bind_tools(tools)
 
 # Define State

@@ -91,10 +91,12 @@ solver_agent = BaseAgent(
         client=instructor.from_openai(
             openai.OpenAI(
                 api_key=os.getenv("API_KEY"),
-                base_url="https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1",
+                # base_url="https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1",
+                base_url="http:/localhost:8000/v1",
             )
         ),
-        model="granite-3-8b-instruct",
+        # model="granite-3-8b-instruct",
+        model="/var/home/instruct/.cache/instructlab/models/Qwen/Qwen2.5-Coder-32B-Instruct",
         system_prompt_generator=SystemPromptGenerator(
             background=[
                 "You are a Solver Agent that takes user input, searches for relevant information to solve the given problem.",
