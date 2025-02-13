@@ -2,37 +2,9 @@ from smolagents import CodeAgent, DuckDuckGoSearchTool
 from smolagents import LiteLLMModel, HfApiModel
 import os
 
-# Environment Variables for OpenAI
-# MODEL_NAME = "gpt-4o"
-# INFERENCE_SERVER_URL = "https://api.openai.com/v1"
-# API_KEY = os.getenv("OPENAI_API_KEY")
-
-# Environment Variables for MaaS https://maas.apps.prod.rhoai.rh-aiservices-bu.com/
-# MODEL_NAME = "openai/granite-3-8b-instruct"
-# INFERENCE_SERVER_URL = os.getenv("MAAS_URL")
-# API_KEY = os.getenv("MAAS_API_KEY")
-# MAX_TOKENS = 2048
-
-# MODEL_NAME = "openai/deepseek-r1-distill-qwen-14b"
-# INFERENCE_SERVER_URL = os.getenv("MAAS_URL")
-# API_KEY = os.getenv("MAAS_API_KEY")
-# MAX_TOKENS = 2048
-
-# Environment Variables for Ollama
-# ollama serve and ollama pull qwen2.5-coder:32b
-# MODEL_NAME = "ollama/qwen2.5-coder:32b"
-# API_KEY = os.getenv("ollama")
-# INFERENCE_SERVER_URL = "http://localhost:11434"
-
-
-# Environment Variables for ilab serve in a remote server
-MODEL_NAME = "openai//var/home/instruct/.cache/instructlab/models/Qwen/Qwen2.5-Coder-32B-Instruct"
-INFERENCE_SERVER_URL = "http://localhost:8000/v1"
-API_KEY = "none"
-# or
-# MODEL_NAME = "openai//var/home/instruct/.cache/instructlab/models/mistralai/Mistral-Small-24B-Instruct-2501"
-# INFERENCE_SERVER_URL = "http://localhost:8000/v1"
-# API_KEY = "none"
+MODEL_NAME = os.getenv("MODEL_NAME")
+INFERENCE_SERVER_URL = os.getenv("INFERENCE_SERVER_URL")
+API_KEY = os.getenv("API_KEY")
 
 model = LiteLLMModel(
     model_id=MODEL_NAME,

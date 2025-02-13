@@ -25,46 +25,20 @@ npm -v
 npm install
 ```
 
-## OpenAI
+```
+export LLM_CLIENT="openai"
+export OPENAI_API_KEY= go get it
+```
+
+Bee seems to require OPENAI_API_KEY and ignores
+
+or
 
 ```
-export INFERENCE_SERVER_URL=https://api.openai.com/v1
-export API_KEY=sk-proj-blah
-export MODEL_NAME=gpt-4o
+export LLM_CLIENT="ollama"
 ```
 
 ```
 node leopard-pont-des-arts.mjs
 ```
 
-## MaaS granite-3-8b-instruct
-
-```
-export INFERENCE_SERVER_URL=https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1
-export API_KEY=169fc1c29353f7c41779f00834287eda
-# export MODEL_NAME=granite-3-8b-instruct
-```
-Note: works better if the model name is NOT defined
-
-To prove connectivity
-
-```
-curl $INFERENCE_SERVER_URL/models \
-  -H "Authorization: Bearer $API_KEY" \
-  -H "Content-Type: application/json"
-```
-
-## MaaS deepseek-r1-distill-qwen-14b
-
-```
-export INFERENCE_SERVER_URL=https://deepseek-r1-distill-qwen-14b-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1
-export API_KEY=blah
-# export MODEL_NAME=deepseek-r1-distill-qwen-14b
-```
-
-### Qwen2.5-Coder-32B-Instruct
-
-```
-export INFERENCE_SERVER_URL=localhost:8000/v1
-export API_KEY=not-required
-```
